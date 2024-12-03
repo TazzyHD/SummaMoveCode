@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Exercises_user;
 use App\Models\User;
 use App\Models\Prestatie;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -15,8 +16,8 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            OefeningSeeder::class,
-            User_oefeningenSeeder::class,
+            //ExerciseSeeder::class,
+            Exercise_userSeeder::class,
         ]);
 
 //        User::create()->create([
