@@ -48,14 +48,6 @@ class ExerciseController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Exercises $exercise)
-    {
-        // Deze methode is niet nodig voor API's, maar kan worden gebruikt in een webapplicatie.
-    }
-
-    /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Exercises $exercise)
