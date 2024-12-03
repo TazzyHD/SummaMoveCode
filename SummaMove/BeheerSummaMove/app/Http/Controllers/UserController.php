@@ -47,9 +47,15 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(User $user)
+    public function show(string $id)
     {
-        //
+        $user = User::find($id);
+
+        if (!$user) {
+            return redirect()->route('users.index')->with('error', 'User not found.');
+        }
+
+        return view('users.show', compact('user'));
     }
 
     /**
@@ -67,8 +73,7 @@ class UserController extends Controller
     {
         $validData = $request->validate([
             'name' => 'max:255',
-            'email' => 'max:255',
-            'password' => ' max:255'
+            'email' => 'max:255'
         ]);
         $user->update($validData);
         return redirect()->route('users.index');

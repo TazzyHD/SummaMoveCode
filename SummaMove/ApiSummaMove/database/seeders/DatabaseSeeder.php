@@ -13,16 +13,13 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
+
+    //Je moet eerst 2 users aanmaken voordat je de Exercise_userSeeder kan seeden.
     public function run(): void
     {
         $this->call([
-            //ExerciseSeeder::class,
-            Exercise_userSeeder::class,
+            ExerciseSeeder::class,
+            //Exercise_userSeeder::class,
         ]);
-
-//        User::create()->create([
-//            'name' => 'Test User',
-//            'email' => 'test@example.com',
-//        ]);
     }
 }
